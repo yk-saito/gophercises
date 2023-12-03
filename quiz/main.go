@@ -29,6 +29,7 @@ func main() {
 	passed := 0
 	reader := csv.NewReader(file)
 
+	// TODO: flagTimerの値に応じて制限時間を設定する
 	for i := 0; ; i++ {
 		record, err := reader.Read()
 		// EOFに到達したらループを抜ける
