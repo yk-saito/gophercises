@@ -2,12 +2,21 @@ package main
 
 import (
 	"encoding/csv"
+	"flag"
 	"fmt"
 	"io"
 	"os"
 )
 
+var flagTimer int
+
+func init() {
+	flag.IntVar(&flagTimer, "limit", 30, "テストの制限時間(秒単位)")
+}
+
 func main() {
+	flag.Parse()
+
 	// 問題と回答が記載されたcsvファイルを読み込む
 	file, err := os.Open("problems.csv")
 	if err != nil {
