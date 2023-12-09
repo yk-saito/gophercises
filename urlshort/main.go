@@ -31,7 +31,7 @@ func main() {
 	// 	}
 	fmt.Println("Starting the server on :8080")
 	// http.ListenAndServe(":8080", yamlHandler)
-	http.ListenAndServe(":8080", mapHandler)
+	http.ListenAndServe(":8080", mapHandler) // TODO: 後ほどyamlHandlerに変更する
 }
 
 // HTTPサーバーで使用するマルチプレクサ（ルーター）を作成する
